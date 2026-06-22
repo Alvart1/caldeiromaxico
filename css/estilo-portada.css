@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fondo:#f4EDDA;
+    --cabezera:#B32c1f;
+    --seciones:#528ab7;
+    --pie:#0D1010;
+    --seciones2:#908c7c;
+}
+
+
+body{
+    width: 100%;
+    height: 0 auto;
+    background-color: var(--fondo); 
+    justify-content: center;
+}
+
+.opciones {
+    display: flex;
+    width: 100%;
+    background-color: var(--cabezera);
+    color: #000000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.5rem;
+}
+.opciones img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.opciones ul{
+    padding: 10px;
+    margin: 12px;
+    color: #000000;
+    display: flex;
+    list-style-type:none;
+    align-items: center;
+    
+}
+.opciones ul li {
+    margin: 0 1rem;
+
+
+}
+.opciones ul li a{
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: larger;
+
+}
+.opciones ul li:hover{
+    background-color: var(--fondo);
+    color:var(--cabezera);
+}
+.desp-event{
+    position: relative;
+    display: inline-block;
+}
+.events2{
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.events2 a:hover{
+    background-color: #9c9c9a;
+
+}
+.desp-event:hover .events2{
+    display: block;
+}
+.desp-event:hover .opciones>nav>li>.desp-event>a {
+    background-color: #16cb1c;
+}
+.historia{
+    width:100%;
+    display: flex;
+}
+.historia1{
+    flex:1;
+    margin: 0 auto;
+    display: block;
+    
+}
+.historiaA{
+    padding-top: 5rem;
+    padding-left: 3rem;
+    text-align: left;
+    margin: 0 auto;
+}
+.historiaA h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow:1px 1px #000000 ;
+}
+.historiaB{
+    margin: 0 auto;
+    padding: 3rem;
+}
+.historiaB p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.historia2{
+    flex:1;
+    height: auto;
+    margin: 0 auto;
+}
+.historia2 img{
+    width: 95%;
+    height: auto;
+    padding: 2rem;
+    clip-path: polygon(10% 10%, 100% 0%, 90% 80%, 0% 100%);
+}
+
+.magos{
+    margin-top:2.5rem;
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+}
+.magos h2{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    padding: 2rem;
+}
+.magos p{
+    width: 60%;
+    margin: 0 auto;
+    font-size: larger;
+
+}
+.carrusel-contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px; /* Ajusta a tu gusto */
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+/* La ventana que oculta lo que se sale */
+.carrusel-mask {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 20px;
+    padding: 0.5rem;
+}
+
+/* La tira que contiene TODAS las imágenes juntas */
+.carrusel-track {
+    display: flex;
+    gap: 2%; /* Espacio entre imágenes */
+    width: 100%;
+}
+
+/* Cada elemento (ahora todos calculan su tamaño igual) */
+.carrusel-track .viñeta {
+    flex: 0 0 18.2%; /* Esto obliga a que entren exactamente 5 en pantalla */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1/1;
+}
+
+.viñeta{
+    background-color: transparent;
+    width:100%;
+    perspective: 1000px;
+}
+.viñeta-interior{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.viñeta:hover .viñeta-interior {
+    transform: rotateY(180deg);
+}
+
+.viñeta-adelante, .viñeta-atras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50%;
+}
+
+.viñeta-atras{
+    background-color: var(--seciones);
+    color: var(--pie);
+    transform: rotateY(180deg);
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: grid;
+    place-items: center;
+} 
+.viñeta-atras p{
+    text-align: center;
+    font-size: 2.5rem;
+    margin:0;
+
+} 
+.viñeta img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid black;
+    
+}
+
+/* Botones de las flechas */
+.flecha {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+.flecha:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.servicios{
+    width: 100%;
+    margin:0 auto;
+    margin-bottom: 5rem;
+}
+.ser-arriba{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem;
+}
+.ser-todo{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.ser1{
+    display:grid ;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    padding: 3rem;
+}
+.ser1:hover{
+    box-shadow:5px 5px 5px 5px #908c7c;
+    transform: scale(120%);
+}
+.ser1 img {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.ser1 h3{
+    text-align: center;
+    padding: 2rem;
+    font-size: 25px;
+}
+.ser1 p{
+    text-align: center;
+    font-size: large;
+}
+.t-eventos{
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    
+}
+.t-eventos h1{
+    
+    padding: 3rem;
+    margin: 0 auto;
+    width: 30%;
+}
+    
+.eventos {
+    margin: 0 auto;
+    background: var(--cabezera);
+    color: var(--pie);
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    gap: 4rem;
+    height: auto;
+    border: 2px solid black;
+}
+.eventos>.cosa>button{
+  background: none;
+  border: none;
+  padding: 0;
+    /* 2. Hereda la tipografía, tamaño y color del texto de la página */
+  font: inherit;
+  color: #000000; 
+    /* 3. ¡SÚPER IMPORTANTE! Hace que aparezca la manito al pasar el cursor */
+  cursor: pointer; 
+    /* 4. Estilos opcionales para que parezcan pestañas elegantes */
+  margin-right: 20px;
+  padding-bottom: 5px;
+  opacity: 0.6; /* Se ven un poco más claros cuando no están seleccionados */
+  transition: all 0.3s ease;
+}
+
+.eventos-listas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+   
+
+}
+.evento-lista{
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    background: #D9B5A0;
+     justify-content: center;
+    align-items: center;
+}
+.evento-lista img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.evento-lista.hidden{
+    display: none;
+}
+.cosa{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.cosa.active{
+    background: #df7700;
+    color: #000000;
+}
+.cosa:hover{
+    background: #717171;
+}
+.lista {
+    display: inline-block; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 0.8rem; 
+    color: white; 
+    margin-bottom: 10px;
+}
+.conf { 
+    background-color: #000000; 
+}
+.tall { 
+    background-color: #0a5dda; 
+}
+.shw { 
+    background-color: #ff4714; 
+}
+
+.tit-gal{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.tit-gal h2{
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    padding: 2rem;
+}
+.fotos{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo);
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+.ft1{
+    padding: 2rem;
+    width: 25%;
+    margin:0 auto;
+}
+.ft1 img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.8),0 5px 14px 0 rgba(0,0,0,0.05);
+}
+
+.contacto{
+    margin: 0 auto;
+    width: 50%;
+ /*   background: linear-gradient(to bottom,#ffffff 45%,#f2a31a 55%); */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.8),0 5px 14px 0 rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.contacto h1{
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    padding: 2rem;
+}
+
+form{
+    width: 60%;
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+}
+form label{
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bold;
+}
+form input,form textarea,form button{
+    border:2px solid black;
+    border-radius: 10px;
+    display: block;
+    padding: 1.5rem;
+    font-size: larger;
+}
+form button{
+    background-color: var(--cabezera);
+    font-weight: bolder
+}
+
+
+footer {
+    background-color: #1a1a1a; /* Un tono oscuro elegante */
+    color: #ffffff;            /* Texto blanco para que contraste */
+    padding: 40px 20px;        /* Espaciado interno superior/inferior y lados */
+    font-family: Arial, sans-serif;
+}
+
+.pie {
+    max-width: 1200px;         /* Evita que el contenido se estire demasiado en pantallas gigantes */
+    margin: 0 auto;            /* Centra todo el bloque del footer en la pantalla */
+    display: flex;
+    flex-direction: column;    /* Organiza los elementos en filas (uno abajo del otro) */
+    align-items: center;       /* Centra todo el contenido horizontalmente */
+    text-align: center;        /* Centra los textos */
+    gap: 20px;                 /* Separa las secciones de forma limpia */
+}
+
+/* --- Fila 1: Logotipo y Título del Copyright --- */
+.pie-tit {
+    display: flex;
+    align-items: center;       /* Alinea el logo perfectamente vertical con el texto */
+    justify-content: center;
+    gap: 15px;                 /* Separación entre el logo y el texto */
+    flex-wrap: wrap;           /* Si no cabe en móviles, el texto baja de forma fluida */
+}
+
+.pie-tit img {
+    height: 50px;              /* Controla el tamaño de tu logo */
+    width: auto;
+    border-radius: 50px;       /* Lo hace redondo si tu logo es cuadrado (opcional) */
+}
+
+.pie-tit h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 0;
+    color: #cccccc;            /* Un blanco más suave para el copyright */
+}
+
+/* --- Texto descriptivo de redes --- */
+.pie-tx p {
+    font-size: 1rem;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* --- Sección de Iconos de Redes Sociales --- */
+.iconos {
+    display: flex;
+    gap: 20px;                 /* Espacio entre los iconos de redes */
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.iconos img {
+    width: 32px;               /* Tamaño estándar y estético para los iconos */
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+/* Efecto visual cuando pasas el cursor sobre Instagram o Facebook */
+.iconos a:hover img {
+    transform: scale(1.15);    /* El icono se agranda un poquito */
+    filter: brightness(1.2);   /* Brilla un pelín más */
+}
+
+/* --- Fila 2: Enlaces Legales, Correo y Ubicación --- */
+.fila2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;                 /* Espaciado generoso entre enlaces */
+    flex-wrap: wrap;           /* En móviles, los enlaces se acomodan uno abajo del otro automáticamente */
+    border-top: 1px solid #333333; /* Una línea sutil divisoria arriba de los enlaces */
+    padding-top: 20px;
+    width: 100%;               /* Ocupa todo el ancho disponible para la línea */
+}
+
+.fila2 a {
+    color: #4da6ff;            /* Un color azul amigable para los links (cambia a tu gusto) */
+    text-decoration: none;     /* Quita la línea de subrayado fea por defecto */
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+/* Efecto al pasar el cursor sobre los links inferiores */
+.fila2 a:hover {
+    color: #ffffff;            /* Se vuelve blanco brillante */
+    text-decoration: underline;/* Se subraya solo al pasar el ratón */
+}
