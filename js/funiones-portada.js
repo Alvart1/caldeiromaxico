@@ -57,8 +57,8 @@ btnPrev.addEventListener('click', () => {
     }, 510);
 });
 
-document.getElementById("btn-info-1").innerHTML="Entrada gratuita";
-document.getElementById("btn-info-2").innerHTML="Entrada socios: 10€<br/>Entrada no socios:20€";
+function boton() { document.getElementById("btn-info-1").innerHTML="Entrada gratuita";}
+function boton2() { document.getElementById("btn-info-2").innerHTML="Entrada socios: 10€<br/>Entrada no socios:20€";}
 document.addEventListener("DOMContentLoaded", () =>{
     const botones = document.querySelectorAll(".cosa");
     const tarjetas = document.querySelectorAll(".evento-lista");
