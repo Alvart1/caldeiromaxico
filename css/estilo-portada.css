@@ -414,7 +414,25 @@ body{
     object-fit: cover;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.8),0 5px 14px 0 rgba(0,0,0,0.05);
 }
+.btn-info-1{
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;              /* Quitamos el borde feo por defecto */
+    border-radius: 8px;        /* Bordes redondeados modernos */
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 600;
+}
+.btn-info-2{
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;              /* Quitamos el borde feo por defecto */
+    border-radius: 8px;        /* Bordes redondeados modernos */
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 600;
 
+}
 .contacto{
     margin: 0 auto;
     width: 50%;
