@@ -332,6 +332,8 @@ body{
 
 }
 .evento-lista{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border: 2px solid #000000;
     border-radius: 8px;
@@ -341,6 +343,7 @@ body{
     background: #D9B5A0;
     justify-content: center;
     align-items: center;
+
 }
 .trj-arriba{
     
@@ -357,13 +360,32 @@ body{
 .trj-abajo{
  width: 100%;
     height: 50%; /* Ocupa la mitad inferior */
-    padding: 20px; /* ¡Tu margen de aire! */
+    padding: 0.5rem;
     box-sizing: border-box; /* Clave para que el padding no estire la tarjeta */
-    
+    gap:5px;
     /* Flexbox interno opcional por si quieres empujar el contenido hacia arriba */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+.trj-abajo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #000000;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.trj-abajo p {
+    margin: 0 0 5px 0; /* Un pequeño espacio abajo de cada dato */
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+/* Tu botón dentro de la tarjeta */
+.trj-abajo .btn-info-1 {
+    margin-top: 10px; /* Empuja el botón un poco más abajo para que respire */
+    width: 100%; /* Si quieres que ocupe todo el ancho, o quítalo si lo quieres pequeño */
 }
 .evento-lista img{
     width: 100%;
