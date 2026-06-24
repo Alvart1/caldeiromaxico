@@ -404,7 +404,7 @@ body{
     font-weight: bold;
 }
 .cosa.active{
-    background: var(--fondo)
+    background: var(--fondo);
     color: #000000;
 }
 .cosa:hover{
