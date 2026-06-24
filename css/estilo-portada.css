@@ -297,15 +297,17 @@ body{
     
 .eventos {
     margin: 0 auto;
+    margin-bottom: 1rem;
     background: var(--cabezera);
     color: var(--pie);
-    width: 70%;
+    width: 100%;
     display:flex;
     justify-content: center;
     align-content: center;
     gap: 4rem;
     height: auto;
     border: 2px solid black;
+    border-radius: 10px;
 }
 .eventos>.cosa>button{
   background: none;
@@ -348,52 +350,27 @@ body{
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
 .trj-arriba{
-    
     width: 100%;
     height: 50%;
-    overflow: hidden;
 }
 .trj-arriba img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
+    height: auto;
 }
 .trj-abajo{
- 
-    padding: 0.5rem;
- 
-    gap:5px;
-    /* Flexbox interno opcional por si quieres empujar el contenido hacia arriba */
-    display: flex;
-    flex-direction: column;
- 
-}
-.trj-abajo h3 {
-    margin: 0;
-    font-size: 2rem;
-    color: #000000;
-    text-transform: uppercase;
-    display: inline;
-}
-
-.trj-abajo p {
-    margin: 0 0 5px 0; /* Un pequeño espacio abajo de cada dato */
-    font-size: 1.5rem;
-    color: #000000;
-}
-
-/* Tu botón dentro de la tarjeta */
-.trj-abajo .btn-info-1 {
-    margin-top: 10px; /* Empuja el botón un poco más abajo para que respire */
-    width: 100%; /* Si quieres que ocupe todo el ancho, o quítalo si lo quieres pequeño */
-}
-.evento-lista img{
     width: 100%;
-    height: auto;
-    margin: 0 auto;
+    height: 50%;
+   margin: 1.5rem;
+    text-align: center;
+
 }
+.trj-abajo .tit{
+    font-weight: 900;
+    padding: 0.5rem;
+}
+
 .evento-lista.hidden{
     display: none;
 }
@@ -405,12 +382,20 @@ body{
     margin-right: 10px;
     font-weight: bold;
 }
+.cosa button{
+    display: inline-flex;
+  align-items: center;      /* Centrado vertical */
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
 .cosa.active{
     background: var(--fondo);
     color: #000000;
 }
 .cosa:hover{
-    background: #717171;
+    background: #d8b0b0;
 }
 .lista {
     display: inline-block; 
@@ -462,17 +447,33 @@ body{
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.8),0 5px 14px 0 rgba(0,0,0,0.05);
 }
 .btn-info-1,.btn-info-2{
+    width: 70%;
+    background: var(--fondo);
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: none;              /* Quitamos el borde feo por defecto */
     border-radius: 8px;        /* Bordes redondeados modernos */
     cursor: pointer;
     padding: 1rem;
+    margin: 1rem;
     font-weight: 600;
 }
 .btn-info-1:hover,.btn-info-2:hover{
-    background-color: #8e24aa;
+    background-color: white;
 }
+
+.texto-oculto {
+  display: none;
+}
+
+/* Cuando el botón se activa, escondemos el original y mostramos el oculto */
+.activo .texto-original {
+  display: none;
+}
+.activo .texto-oculto {
+  display: inline; /* O 'block' si quieres que respete los saltos de línea */
+}
+
 .contacto{
     margin: 0 auto;
     width: 50%;

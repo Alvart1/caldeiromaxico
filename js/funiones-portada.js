@@ -57,9 +57,13 @@ btnPrev.addEventListener('click', () => {
     }, 510);
 });
 
-function boton1() { document.getElementById("btn-info-1").innerHTML="Entrada gratuita";}
-function boton2() { document.getElementById("btn-info-2").innerHTML="Entrada socios: 10€<br/>Entrada no socios:20€";}
-function boton3() { document.getElementById("btn-info-3").innerHTML="Entrada gratuita";}
+function intercambiarTexto(numeroBoton) {
+  // Buscamos el botón por su ID dinámicamente (ej: "btn-info-1")
+  const boton = document.getElementById("btn-info-" + numeroBoton);
+  
+  // .toggle() añade la clase 'activo' si no la tiene, y se la quita si ya la tiene
+  boton.classList.toggle("activo");
+}
 
 document.addEventListener("DOMContentLoaded", () =>{
     const botones = document.querySelectorAll(".cosa");

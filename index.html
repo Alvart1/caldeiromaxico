@@ -199,7 +199,7 @@ compartir e lembrar que, nun bo caldeiro, o imposible sempre se volve realidade.
 </section> 
 <section class="t-eventos" id="eventos"><h1>Eventos</h1>
 <div class="eventos" id="contenedorEventos">
-    <div class="cosa" data-categoria="todo" id="todo"><button>Todos</button></div>
+    <div class="cosa" data-categoria="todo" id="todo"><button> Todos  </button></div>
     <div class="cosa" data-categoria="conferencia" id="confe"><button>Conferencias</button></div>
     <div class="cosa" data-categoria="taller" id="taller"><button>Talleres</button></div>
     <div class="cosa" data-categoria="show" id="show"><button>Shows</button></div> 
@@ -212,11 +212,14 @@ compartir e lembrar que, nun bo caldeiro, o imposible sempre se volve realidade.
       <div class="trj-arriba">
       <img src="otros/nacho-gonzalez.jpg"></div>
       <div class="trj-abajo">
-      <h3>Conferencia:</h3><p> Trapalladas</p>
-      <h3>Conferenciante: </h3><p> Nacho Gonzalez</p>
-      <h3>Data:</h3> <p>15 de Marzo </p>
-      <h3>Hora:</h3><p> 11.00h</p>
-      <button class="btn-info-1"id="btn-info-1" onclick="boton1()">Máis info</button></div>
+      <span class="tit">Conferencia: </span><p> Trapalladas</p>
+      <span class="tit">Conferenciante: </span><p> Nacho Gonzalez</p>
+      <span class="tit">Data: </span> <p>15 de Marzo </p>
+      <span class="tit">Hora: </span><p> 11:00h</p></div>
+      <button class="btn-info-1" id="btn-info-1" onclick="intercambiarTexto(1)">
+  <span class="texto-original">Entradas</span>
+  <span class="texto-oculto">Entrada gratuita para todos los públicos</span>
+</button>
     </div>
 
     <div class="evento-lista conferencia">
@@ -224,11 +227,14 @@ compartir e lembrar que, nun bo caldeiro, o imposible sempre se volve realidade.
       <div class="trj-arriba">
       <img src="otros/karvis.jpg"></div>
       <div class="trj-abajo">
-      <h3>Conferencia: A maxia emocional</h3>
-      <h3>Conferenciante: </h3> <p> Mago Karvis</p>
-      <h3>Fecha: </h3><p>14 de Junio </p>
-      <h3>Hora:</h3> <p>11.00h</p> 
-      <button class="btn-info-2" id="btn-info-2" onclick="boton2()">Máis info</button></div>
+      <span class="tit">Conferencia: </span><p> A maxia emocional</p>
+      <span class="tit">Conferenciante: </span><p> Mago Karvis</p>
+      <span class="tit">Data: </span> <p>14 de Junio </p>
+      <span class="tit">Hora: </span><p> 11:00h</p> </div>
+      <button class="btn-info-1" id="btn-info-2" onclick="intercambiarTexto(2)">
+  <span class="texto-original">Precios</span>
+  <span class="texto-oculto">Socios: 10€<br/>No socios: 20€</span>
+</button>
     </div>
 <!--    <div class="evento-lista taller">
       <div class="lista tall"></div>
@@ -244,10 +250,14 @@ compartir e lembrar que, nun bo caldeiro, o imposible sempre se volve realidade.
       <div class="trj-arriba">
       <img src="otros/karvis.jpg"></div>
       <div class="trj-abajo">
-      <h3>Reflexos</h3>
-      <h3>Fecha:</h3><p> 14 de Marzo </p>
-      <h3>Hora:</h3><p> 23:00h</p>
-      <button class="btn-info-1" id="btn-info-3" onclick="boton3()">Entradas</button></div>
+      <span class="tit">Show:</span><p> Reflexos</p>
+      <span class="tit">Artista:</span><p> Karvis</p>
+      <span class="tit">Data: </span> <p>14 de Marzo </p>
+      <span class="tit">Hora: </span><p> 23:00h</p></div>
+      <button class="btn-info-1"  id="btn-info-3"   onclick="intercambiarTexto(3)">
+  <span class="texto-original">Entradas</span>
+  <span class="texto-oculto">Entrada gratuita para todos los públicos</span>
+</button>
     </div>
     
   </div>
