@@ -343,17 +343,27 @@ body{
     align-items: center;
 }
 .trj-arriba{
-    margin: 0 auto;
+    
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.trj-arriba img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
 }
 .trj-abajo{
-    margin: 0 auto;
-    width: 100%;
-    height: 50%;
-    margin-bottom: 0.5rem;
-    box-sizing:border-box;
+ width: 100%;
+    height: 50%; /* Ocupa la mitad inferior */
+    padding: 20px; /* ¡Tu margen de aire! */
+    box-sizing: border-box; /* Clave para que el padding no estire la tarjeta */
+    
+    /* Flexbox interno opcional por si quieres empujar el contenido hacia arriba */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .evento-lista img{
     width: 100%;
