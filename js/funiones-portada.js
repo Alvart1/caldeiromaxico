@@ -59,6 +59,8 @@ btnPrev.addEventListener('click', () => {
 
 function boton1() { document.getElementById("btn-info-1").innerHTML="Entrada gratuita";}
 function boton2() { document.getElementById("btn-info-2").innerHTML="Entrada socios: 10€<br/>Entrada no socios:20€";}
+function boton3() { document.getElementById("btn-info-3").innerHTML="Entrada gratuita";}
+
 document.addEventListener("DOMContentLoaded", () =>{
     const botones = document.querySelectorAll(".cosa");
     const tarjetas = document.querySelectorAll(".evento-lista");
