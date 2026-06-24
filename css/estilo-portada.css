@@ -370,7 +370,7 @@ body{
 }
 .trj-abajo h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #000000;
     text-transform: uppercase;
     display: inline-block;
@@ -378,7 +378,7 @@ body{
 
 .trj-abajo p {
     margin: 0 0 5px 0; /* Un pequeño espacio abajo de cada dato */
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #000000;
 }
 
