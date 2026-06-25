@@ -695,7 +695,7 @@ footer {
 
     /* Ajustamos el carrusel para que muestre 1 solo miembro por pantalla */
     .carrusel-track .viñeta {
-        flex: 0 0 96%; 
+        flex: 0 0 90%; 
     }
     .carrusel-mask {
         margin: 0 5px;
