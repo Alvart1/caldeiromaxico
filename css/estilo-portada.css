@@ -83,6 +83,7 @@ body{
 .historia{
     width:100%;
     display: flex;
+    flex-wrap: wrap;  /*Permite que la imagen baje si no hay espacio*/
 }
 .historia1{
     flex:1;
@@ -119,7 +120,9 @@ body{
     padding: 2rem;
     clip-path: polygon(10% 10%, 100% 0%, 90% 80%, 0% 100%);
 }
-
+.historia1,.historia2{
+    flex:1 1 450px;
+}
 .magos{
     margin-top:2.5rem;
     width: 100%;
@@ -252,6 +255,7 @@ body{
 .ser-todo{
     width: 100%;
     display: flex;
+    flex-wrap:wrap;
     gap: 2rem;
     justify-content: center;
 }
@@ -259,6 +263,8 @@ body{
     display:grid ;
     justify-content: center;
     width: 20%;
+    max-width: 300px;
+    
     height: auto;
     text-align: center;
     padding: 3rem;
@@ -493,7 +499,8 @@ body{
 }
 
 form{
-    width: 60%;
+    width: 100%;
+    max-width: 500px;
     display: grid;
     align-items: center;
     margin: 0 auto;
@@ -605,4 +612,121 @@ footer {
 .fila2 a:hover {
     color: #ffffff;            /* Se vuelve blanco brillante */
     text-decoration: underline;/* Se subraya solo al pasar el ratón */
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* --- TABLETAS (Pantallas menores a 992px) --- */
+@media (max-width: 992px) {
+    .opciones {
+        padding: 0 1.5rem;
+    }
+    
+    .magos p {
+        width: 80%; /* Más ancho para que el texto sea legible */
+    }
+
+    /* Ajustamos el carrusel para que muestre 3 elementos en vez de 5 */
+    .carrusel-track .viñeta {
+        flex: 0 0 31.3%; 
+    }
+    
+    /* Ajustamos las fotos de la galería a 2 por fila */
+    .fotos {
+        flex-wrap: wrap;
+    }
+    .ft1 {
+        width: 50%;
+    }
+    
+    .contacto {
+        width: 80%;
+    }
+}
+
+/* --- TELÉFONOS MÓVILES (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    /* Menú de navegación adaptable básico */
+    .opciones {
+        flex-direction: column; /* El logo arriba, el menú abajo */
+        padding: 1rem;
+    }
+    
+    .opciones ul {
+        flex-direction: column; /* Los enlaces uno abajo del otro */
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .opciones ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    
+    /* Desplegable de eventos en móvil */
+    .events2 {
+        position: relative; /* Ya no flota, empuja el contenido hacia abajo de forma natural */
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .historiaA {
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        text-align: center;
+    }
+    
+    .historiaB {
+        padding: 1.5rem;
+    }
+
+    .magos h2, .ser-arriba, .contacto h1, .tit-gal h2 {
+        font-size: 2.2rem; /* Títulos más pequeños para que no se corten */
+    }
+
+    .magos p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* Ajustamos el carrusel para que muestre 1 solo miembro por pantalla */
+    .carrusel-track .viñeta {
+        flex: 0 0 96%; 
+    }
+    .carrusel-mask {
+        margin: 0 5px;
+    }
+    .viñeta-atras p {
+        font-size: 1.8rem;
+    }
+
+    /* Filtros de eventos en vertical o bloques más compactos */
+    .eventos {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    .cosa {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    /* Fotos de la galería a 1 por fila */
+    .ft1 {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contacto {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    form input, form textarea, form button {
+        padding: 1rem; /* Inputs de tamaño adecuado para dedos */
+    }
 }

@@ -3,7 +3,15 @@ const btnPrev = document.getElementById('izquierda');
 const btnNext = document.getElementById('derecha');
 
 // El tamaño de desplazamiento por cada click (19.2% ancho + 1% gap)
-const paso = 20.2; 
+function obtenerPaso() {
+    if (window.innerWidth <= 768) {
+        return 98; // Ajuste para 1 miembro en móvil (+ gap)
+    } else if (window.innerWidth <= 992) {
+        return 33.3; // Ajuste para 3 miembros en tableta (+ gap)
+    } else {
+        return 20.2; // Original para PC (5 miembros)
+    }
+}
 
 // Bandera para evitar que el usuario pulse super rápido y rompa la animación
 let estaAnimando = false;
@@ -14,6 +22,7 @@ track.style.transform = `translateX(0%)`;
 btnNext.addEventListener('click', () => {
     if (estaAnimando) return;
     estaAnimando = true;
+    const paso = obtenerPaso(); // Obtenemos el paso actual del dispositivo
 
     // 1. Añadimos la transición para que se mueva suave
     track.style.transition = 'transform 0.5s ease-in-out';
