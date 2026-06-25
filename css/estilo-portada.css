@@ -71,7 +71,8 @@ body{
     z-index: 1;
 }
 .events2 a:hover{
-    background-color: #9c9c9a;
+    background-color:var(--pie);
+    color: var(--fondo);
 
 }
 .desp-event:hover .events2{
